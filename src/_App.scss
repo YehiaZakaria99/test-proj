@@ -1,0 +1,71 @@
+$main-color: #2c3e50;
+$secondary-color: #1abc9c;
+$third-color: #1a252f;
+$text-color: #fff;
+
+
+.sec-h{
+    height: 95vh;
+}
+section {
+  overflow: hidden;
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-sec {
+  background-color: $secondary-color;
+}
+
+.vh-95 {
+  height: 95vh;
+}
+
+@mixin mainHeading($color) {
+  color: $color;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  h2 {
+    font-size: 40px;
+    font-weight: bold;
+  }
+  .icons {
+    gap: 10px;
+    .line {
+      width: 80px;
+      height: 4px;
+      background-color: $color;
+    }
+  }
+}
+
+.content-box-white {
+  @include mainHeading($text-color);
+}
+.content-box-dark {
+  @include mainHeading($main-color);
+}
+
+// Nav
+.navbar-nav .nav-link.active {
+  background-color: $secondary-color;
+  border-radius: 8px;
+}
+
+// Footer
+
+.py-6 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}

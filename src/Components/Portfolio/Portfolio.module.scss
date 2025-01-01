@@ -1,0 +1,24 @@
+@import "../../App";
+
+.box {
+  cursor: pointer;
+  position: relative;
+  .overlay {
+    content: "";
+    @extend .flex;
+    color: $text-color;
+    // font-size: 150px;
+    // font-weight: bold;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    background-color: $secondary-color;
+    transition: all 0.5s;
+  }
+  &:hover .overlay {
+    opacity: 0.8;
+  }
+}
