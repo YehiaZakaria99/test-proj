@@ -12,7 +12,7 @@ import Notfound from "./Components/NotFound/Notfound";
 
 export default function App() {
   // Create Router Browser
-  let routers = createHashRouterr ([
+  let routers = createHashRouter ([
     {
       path: "/",
       element: <Layout />,
