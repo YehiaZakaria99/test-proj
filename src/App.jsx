@@ -27,7 +27,7 @@ export default function App() {
       },
     ],
     {
-      basename: "/start-framework",
+      basename: "/test-proj",
     }
   );
   return (
