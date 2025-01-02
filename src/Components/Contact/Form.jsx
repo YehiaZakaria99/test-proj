@@ -2,36 +2,38 @@ import React, { useState } from "react";
 import Style from "./Contact.module.scss";
 
 export default function Form() {
-    const [placeHolder, setPlaceHolder] = useState("");
-    let [addShow, setaddShow] = useState(false);
-    function show(val , ph){
-        if(val){
-            setaddShow(true);
-            setPlaceHolder(`${ph} :`);
-        } else{
-            setaddShow(false);
-        }
-        return addShow;
-    }
+    // const [placeHolder, setPlaceHolder] = useState("");
+    // let [addShow, setaddShow] = useState(false);
+    // function show(val , ph){
+    //     if(val){
+    //         setaddShow(true);
+    //         setPlaceHolder(`${ph} :`);
+    //     } else{
+    //         setaddShow(false);
+    //     }
+    //     return addShow;
+    // }
+  
+
 
   return (
     <>
       <form action="">
         <div className={`${Style["input-box"]}`}>
-            <span className={`${addShow ? Style["show"] : ""}`}>{placeHolder}</span>
-            <input onInput={(e)=> show(e.target.value, e.target.placeholder)} autoComplete="current-userName" className="my-3" type="text" placeholder="userName"/>
+            <span className={``}>{}</span>
+            <input  autoComplete="current-userName" className="my-3" type="text" placeholder="userName"/>
         </div>
         <div className={`${Style["input-box"]}`}>
-            <span className={`${addShow ? Style["show"] : ""}`}>{placeHolder}</span>
-            <input onInput={(e)=> show(e.target.value, e.target.placeholder)} className="my-3" autoComplete="current-age"  type="text" placeholder="userAge"/>
+            <span className={``}>{}</span>
+            <input  className="my-3" autoComplete="current-age"  type="text" placeholder="userAge"/>
         </div>
         <div className={`${Style["input-box"]}`}>
-            <span className={`${addShow ? Style["show"] : ""}`}>{placeHolder}</span>
-            <input onInput={(e)=> show(e.target.value, e.target.placeholder)} className="my-3" autoComplete="current-email" type="email" placeholder="userEmail"/>
+            <span className={``}>{}</span>
+            <input  className="my-3" autoComplete="current-email" type="email" placeholder="userEmail"/>
         </div>
         <div className={`${Style["input-box"]}`}>
-            <span className={`${addShow ? Style["show"] : ""}`}>{placeHolder}</span>
-            <input onInput={(e)=> show(e.target.value, e.target.placeholder)} className="my-3" autoComplete="current-password" type="password" placeholder="userPassword"/>
+            <span className={``}>{}</span>
+            <input  className="my-3" autoComplete="current-password" type="password" placeholder="userPassword"/>
         </div>
         <button type="submit" className={`${Style["send-btn"]}`}>Send Message</button>
       </form>
