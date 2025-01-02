@@ -22,12 +22,10 @@
             position: absolute;
             z-index: 1;
             transition: all .5s;
+            top: 0;
             // transform: translateY(20px);
-            transform: translateY(20px);
         }
-        .show{
-            transform: translateY(-20px);
-        }
+
     }
     .send-btn{
         padding: 10px 15px;

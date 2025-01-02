@@ -3,9 +3,8 @@ $secondary-color: #1abc9c;
 $third-color: #1a252f;
 $text-color: #fff;
 
-
-.sec-h{
-    height: 95vh;
+.sec-h {
+  height: 95vh;
 }
 section {
   overflow: hidden;
@@ -29,6 +28,14 @@ a {
 
 .vh-95 {
   height: 95vh;
+}
+
+.show {
+  transform: translateY(-15px);
+}
+
+.hide {
+  transform: translateY(20px);
 }
 
 @mixin mainHeading($color) {
