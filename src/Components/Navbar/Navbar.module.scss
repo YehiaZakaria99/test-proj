@@ -2,57 +2,48 @@
 
 .navbar {
   z-index: 999999999;
-  transition: all .5s;
+  transition: all 0.5s;
   position: fixed;
   width: 100%;
   background-color: $main-color;
+  button {
+    &:focus {
+      box-shadow: none;
+    }
+  }
   .navLogo {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
     color: $text-color;
   }
   .nav-links {
     .links-list {
       gap: 10px;
+      margin: 20px 0;
       li {
         a {
           color: $text-color;
           font-weight: bold;
           font-size: 1rem;
           text-transform: uppercase;
+          padding: 10px;
+          display: block;
+          width: fit-content;
         }
       }
     }
   }
 }
 
-.active{
-  background-color: $secondary-color;
+@media (min-width: 992px) {
+  .navbar {
+    .navLogo {
+      font-size: 2rem;
+    }
+    .nav-links {
+      .links-list {
+        margin: 0;
+      }
+    }
+  }
 }
-
-
-
-// /*
-//       <nav className="navBar">
-//         <div className="navLogo">
-//           <Link to="">Start Framework</Link>
-//         </div>
-//         <div className="navLinks">
-//           <ul className="links-list">
-//             <li>
-//               <Link to="">Home</Link>
-//             </li>
-//             <li>
-//               <Link to="about">About</Link>
-//             </li>
-//             <li>
-//               <Link to="portfolio">Portfolio</Link>
-//             </li>
-//             <li>
-//               <Link to="contact">Contact</Link>
-//             </li>
-//           </ul>
-//         </div>
-//       </nav>
-
-// */

@@ -1,16 +1,33 @@
 import React, { useState } from "react";
 import PageTitle from "../PageTitle/PageTitle";
 import PortfolioChild from "./PortfolioChild";
+import Style from "./Portfolio.module.scss";
+import ShowImg from "./ShowImg";
+import port1 from "../../assets/portfolio/port1.png";
+import port2 from "../../assets/portfolio/port2.png";
+import port3 from "../../assets/portfolio/port3.png";
 
 export default function Portfolio() {
-  // const [box, setBox] = useState({
-  //   port1 : "port1",
-  //   port2 : "port1",
-  //   port3 : "port1",
-  // });
+  const [imgs, setImgs] = useState([
+    { src: port1 },
+    { src: port2 },
+    { src: port3 },
+    { src: port1 },
+    { src: port2 },
+    { src: port3 },
+  ]);
 
+  const [src, setSrc] = useState("");
+  const [handleImg, setHandleImg] = useState(false);
 
-  
+  function getImgSrc(el) {
+    setSrc(el.currentTarget.children[1].src);
+    setHandleImg(true);
+  }
+
+  function hideImage(el) {
+    !el.target.hasAttribute("src") && setHandleImg(false);
+  }
   return (
     <>
       <PageTitle title={"portfolio"} />
@@ -25,9 +42,22 @@ export default function Portfolio() {
             </div>
           </div>
           <div className="row g-5">
-            <PortfolioChild />
-            <PortfolioChild />
+            {imgs.map((img, index) => (
+              <div className="col-md-6 col-lg-4 col-12" key={index}>
+                <PortfolioChild
+                  getImgSrc={getImgSrc}
+                  imgSrc={img.src}
+                  imgAlt={`port${index}`}
+                />
+              </div>
+            ))}
           </div>
+        </div>
+        <div
+          onClick={(el) => hideImage(el)}
+          className={`${Style["show-img"]} ${handleImg ? "d-flex" : "d-none"}`}
+        >
+          <ShowImg src={src} imgAlt={`port`} />
         </div>
       </section>
     </>

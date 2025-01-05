@@ -3,7 +3,6 @@ import { Link, NavLink } from "react-router-dom";
 // import { animateScroll as scroll } from 'react-scroll';
 import Style from "./Navbar.module.scss";
 
-
 export default function Navbar() {
   const [scrolling, setScrolling] = useState(false);
   useEffect(() => {
@@ -20,7 +19,11 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className={`navbar navbar-expand-lg ${Style["navbar"]} ${scrolling ? "py-1" : "py-3"}`}>
+      <nav
+        className={`navbar navbar-expand-lg ${Style["navbar"]} ${
+          scrolling ? "py-1" : "py-3"
+        }`}
+      >
         <div className="container">
           <Link
             className={`navbar-brand ${Style["navLogo"]} text-uppercase`}
@@ -37,7 +40,7 @@ export default function Navbar() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="navbar-toggler-icon" />
+            <i className="text-white fa-solid fa-bars"></i>
           </button>
           <div
             className={`collapse navbar-collapse ${Style["nav-links"]}`}

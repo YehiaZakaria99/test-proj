@@ -1,39 +1,36 @@
 @import "../../App";
 
-.form{
-    // @extend .flex;
-    padding-top: 60px;
-    padding-bottom: 60px;
-    width: 60%;
-    .input-box{
-        position: relative;
-        input{
-            width: 100%;
-            padding: 10px 15px;
-            border: 0;
-            outline: 0;
-            border-radius: 5px;
-            box-shadow: 0 1px 0px #d8dadc;
-            position: relative;
-            z-index: 2;
-        }
-        span{
-            color: $secondary-color;
-            position: absolute;
-            z-index: 1;
-            transition: all .5s;
-            top: 0;
-            // transform: translateY(20px);
-        }
-
+.form {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  width: 60%;
+  .input-box {
+    position: relative;
+    input {
+      width: 100%;
+      padding: 10px 15px;
+      border: 0;
+      outline: 0;
+      border-radius: 5px;
+      box-shadow: 0 1px 0px #d8dadc;
+      position: relative;
+      z-index: 2;
     }
-    .send-btn{
-        padding: 10px 15px;
-        border: 0;
-        outline: 0;
-        background-color: $secondary-color;
-        color: $text-color;
-        border-radius: 8px;
-        font-weight: bold;
+    span {
+      color: $secondary-color;
+      position: absolute;
+      z-index: 1;
+      transition: all 0.5s;
+      top: 0;
     }
+  }
+  .send-btn {
+    padding: 10px 15px;
+    border: 0;
+    outline: 0;
+    background-color: $secondary-color;
+    color: $text-color;
+    border-radius: 8px;
+    font-weight: bold;
+  }
 }

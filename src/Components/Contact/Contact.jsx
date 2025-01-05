@@ -6,7 +6,7 @@ export default function Contact() {
   return (
     <>
       <PageTitle title={"contact"} />
-      <section className="sec-h">
+      <section className="">
         <div className="container">
           <div className="content-box-dark">
             <h2 className="text-uppercase my-3">Contact Section</h2>
